@@ -1,0 +1,19 @@
+/* الكروت بتأثير الزجاج المطفي */
+.card { 
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+  
+  /* حاجه صغننه مميزه  */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* الون الكروت */
+.card:hover {
+  transform: translateY(-5px) !important; 
+  border-color: rgba(255, 255, 255, 0.2) !important; 
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.7) !important; 
+}

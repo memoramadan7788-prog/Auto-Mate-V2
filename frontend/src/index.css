@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+body {
+  background: radial-gradient(circle at center, #1a2332 0%, #0f1319 100%) !important;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
