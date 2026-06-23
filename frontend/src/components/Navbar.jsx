@@ -29,7 +29,7 @@ const Navbar = () => {
           >
             <path d="M 2.4 34.5 C 13.5 37.5 35 44 47.5 14.5" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
             <path d="M 2 43 C 25 43 45 49 53 45 C 55 44 57 47 55 52 C 53 58 53 66 57 71 C 57 74 43 76 38 76 C 30 76 29 71 25 71 C 21 71 20 76 10 76 C 2 76 2 60 2 43 Z" />
-            <circle cx="33" cy="71" r="11" fill="#0f172a" /> {/* تعديل لون تجويف الإطار ليناسب الـ Dark Mode */}
+            <circle cx="33" cy="71" r="11" fill="#0f172a" /> {/* الجانط*/}
             <circle cx="33" cy="71" r="7" fill="currentColor" />
             <rect x="2" y="82" width="96" height="4" rx="2" />
             <circle cx="71" cy="29" r="6" />
@@ -39,7 +39,7 @@ const Navbar = () => {
             <path d="M 74 34 C 67 38 59 43 57 47 C 62 49 68 44 75 42 C 78 45 84 52 87 59 C 89 64 87 75 87 81 C 83 81 81 81 81 81 C 81 74 80 69 77 66 C 74 63 71 63 69 66 C 67 69 67 74 67 81 C 63 81 62 81 62 81 C 62 73 63 65 67 59 C 71 52 75 46 74 34 Z" />
           </svg>
 
-          {/* اسم المشروع باللون الأبيض والـ Mate باللون الأزرق المضيء */}
+          {/*لوجو */}
           <span className="text-xl font-bold text-white tracking-tight drop-shadow-sm">
             Auto<span className="text-blue-500 group-hover:text-blue-400 transition-colors">Mate</span>
           </span>

@@ -7,7 +7,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 5000;
 
-// دالة الاتصال بقاعدة البيانات مع طباعة الخطأ إن وجد
+
 async function dbConnection() {
   try {
     await mongoose.connect(process.env.DB_URI);
@@ -17,14 +17,15 @@ async function dbConnection() {
   }
 }
 
-// استدعاء المسارات - تأكدي من مطابقة اسم الملف لديكِ (authRoutes أو authRouts)
-const authRoutes = require("./routes/authRoutes");
-app.use("/api", authRoutes);
+const authRoutes = require("./src/routes/authRoutes");
+const autoRoutes = require("./src/routes/autoRoutes"); 
 
-// تشغيل دالة الاتصال بقاعدة البيانات
+app.use("/api/auth", authRoutes);
+app.use("/api/auto", autoRoutes);
+
+
 dbConnection();
 
-// تشغيل السيرفر والاستماع للمنفذ
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });

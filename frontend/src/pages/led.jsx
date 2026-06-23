@@ -72,7 +72,7 @@ const Led = () => {
         LED Services
       </h2>
       
-      {/* شبكة العرض المستجيبة */}
+     
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:max-w-4xl gap-6 justify-items-center">
         {ledProducts.map((product) => (
           <div 
@@ -94,12 +94,11 @@ const Led = () => {
               {product.name}
             </h3>
 
-            {/* تعديل لون الوصف لرمادي فاتح مريح للعين */}
+            
             <p className="text-gray-300 text-center text-xs leading-relaxed max-w-[240px] mb-4 flex-grow">
               {product.description}
             </p>
 
-            {/* لمبة الـ LED المضيئة */}
             <div className="flex items-center justify-center pt-2 mt-auto w-full flex-shrink-0">
               
               {product.ledStatus === "green" && (

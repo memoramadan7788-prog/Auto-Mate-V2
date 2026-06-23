@@ -4,6 +4,10 @@ import Led from "./pages/led";
 
 import carBackground from "./assets/Screenshot 2026-06-02 084443.png"; 
 import Home from "./pages/Home.jsx";
+import { Route, Routes } from 'react-router-dom';
+import Maintenance from './pages/Maintenance.jsx';
+import QuickHelp from './pages/QuickHelp.jsx';
+
 
 const App = () => {
   const appStyle = {
@@ -21,43 +25,44 @@ const App = () => {
     boxSizing: 'border-box'
   };
 
+
   return (
-    <div style={appStyle}>
+
+
+<>
+
+ <div style={appStyle}>
   
       <Navbar /> 
 
      
-      
-      <div style={{
-        textAlign: 'left',
-        padding: '140px 20px 60px 8%', 
-        color: 'white',
-        fontFamily: 'system-ui, -apple-system, sans-serif'
-      }}>
-        <h1 style={{ 
-          fontSize: '3.5rem', 
-          fontWeight: '800', 
-          marginBottom: '20px',
-          letterSpacing: '1px'
-        }}>
-          Drive Smart. <span style={{ color: '#2563eb' }}>Stay Safe.</span>
-        </h1>
-        
-       
-        <p style={{ 
-          fontSize: '1.25rem', 
-          color: '#9ca3af', 
-          maxWidth: '650px', 
-          marginBottom: '30px',
-          lineHeight: '1.6'
-        }}>
-          Everything you need — Regular maintenance , dashboard warnings & roadside rescue, all in one place.
-        </p>
-      </div>
+    
+<Routes>
+
+<Route path= "" element= {<Home/>}/>
+<Route path= "/services/led" element= {<Led/>}/>
+<Route path= "/services/maintenance" element= {<Maintenance/>}/>
+<Route path= "/services/quick-help" element= {<QuickHelp/>}/>
+
+
+</Routes>
+
+
 
      
-      <Home />
     </div>
+</>
+
+
+
+
+    
+   
+
+
+
+
+
   );
 };
 

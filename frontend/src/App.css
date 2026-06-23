@@ -1,4 +1,4 @@
-/* الكروت بتأثير الزجاج المطفي */
+/* الكروت بتنور */
 .card { 
   background: rgba(255, 255, 255, 0.03) !important;
   backdrop-filter: blur(12px) !important;
@@ -7,7 +7,7 @@
   border-radius: 16px !important;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
   
-  /* حاجه صغننه مميزه  */
+
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
