@@ -3,10 +3,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-
-const { registerSchema, loginSchema } = require("./validation/authValidation");// const { string } = require("joi");
-
-
+const { registerSchema, loginSchema } = require("./validation/authValidation"); // const { string } = require("joi");
 
 const register = async (req, res) => {
   try {
@@ -77,7 +74,7 @@ const login = async (req, res) => {
 
     res.status(200).json({
       msg: "login Success",
-      token: token,
+      token,
     });
   } catch (error) {
     res.status(500).json({

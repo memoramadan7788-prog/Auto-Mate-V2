@@ -65,9 +65,11 @@ const Navbar = () => {
     
     </Dropdown>
 
-          <button className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all shadow-[0_4px_12px_rgba(37,99,235,0.2)] hover:shadow-[0_4px_20px_rgba(37,99,235,0.4)]">
-            Contact
-          </button>
+          <Link to="/login">
+  <button className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all shadow-[0_4px_12px_rgba(37,99,235,0.2)] hover:shadow-[0_4px_20px_rgba(37,99,235,0.4)]">
+ <a href="/Login"> Login</a>  
+  </button>
+</Link>
         </div>
 
       </div>

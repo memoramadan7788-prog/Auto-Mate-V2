@@ -1,21 +1,29 @@
-const JWT = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-const authMiddleware =(req,res,next) =>{
-    try{
-const authHeaders = req.headers.authorization;
-        if(!authHeaders)return re.status (401).json({msg:"token required"});
+const authMiddleware = (req, res, next) => {
+  // 1. Get the token from the Authorization header (Format: Bearer <token>)
+  const authHeader = req.headers.authorization;
+  
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ message: 'Access denied. No token provided.' });
+  }
 
+  const token = authHeader.split(' ')[1];
 
-       
-            const token =  authHeaders.split(" 1 ")
-            const payloded = JWT.verifay(token,process.env.JWT_SK);
-       
-                req.user = payload.id;
-                next();
+  try {
+    // 2. Verify the token using your secret key
+    // Ensure you have process.env.JWT_SECRET defined in your .env file
+    const decoded = jwt.verify(token, process.env.JWT_SK);
+    
+    // 3. Attach the user payload to the request object
+    req.user = decoded;
+    
+    // 4. Move to the next middleware or route handler
+    next();
+  } catch (error) {
+    // Catch expired or tampered tokens
+    return res.status(403).json({ message: 'Invalid or expired token.' });
+  }
+};
 
-    } catch (error){
-       return res.status(401).json({msg:"Token Invaild"});
-
-    }
-}
 module.exports = authMiddleware;
